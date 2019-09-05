@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="383.0" prefWidth="555.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="amusementparkssystem.FXMLParkCreationController">
+   <children>
+      <Label layoutX="154.0" layoutY="14.0" text="Amusement Park Creation">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="424.0" layoutY="51.0" text="Parks:">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <ListView fx:id="parksList" onMouseClicked="#handleParksListStatusLabel" layoutX="341.0" layoutY="72.0" prefHeight="298.0" prefWidth="200.0" />
+      <Label layoutX="95.0" layoutY="85.0" text="Park Name:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="parkNameInput" layoutX="95.0" layoutY="104.0" />
+      <Label layoutX="94.0" layoutY="137.0" text="Ticket Price:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="parkTicketPriceInput" layoutX="95.0" layoutY="156.0" />
+      <Button fx:id="parkCreateButton" onAction="#createPark" layoutX="144.0" layoutY="208.0" mnemonicParsing="false" text="Create" />
+      <Label fx:id="statusLabel" layoutX="149.0" layoutY="255.0">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="closeButton" onAction="#closeForm" layoutX="94.0" layoutY="291.0" mnemonicParsing="false" text="Close Form" />
+      <Button fx:id="nextButton" onAction="#goToNextPage" layoutX="173.0" layoutY="291.0" mnemonicParsing="false" text="Next Page" />
+   </children>
+</AnchorPane>
